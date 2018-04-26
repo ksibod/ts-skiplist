@@ -1,0 +1,21 @@
+{
+  "name": "skip-list",
+  "version": "1.0.0",
+  "description": "A typescript implementation of a probabalistic skip list.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && ava-ts test/test.ts --verbose"
+  },
+  "author": "Ashley Kyle Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "ava-ts": "^0.24.4",
+    "ts-node": "^6.0.0",
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "moment": "^2.22.1"
+  }
+}
