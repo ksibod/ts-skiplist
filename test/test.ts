@@ -1,5 +1,5 @@
 import { describe, it, expect, time } from 'ts-simple-test';
-import SkipList from '../src/SkipList';
+import { SkipList } from '../src/SkipList';
 
 const maxLevel = 10;
 let skipListNum: SkipList<number>;
