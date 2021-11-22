@@ -1,26 +1,24 @@
-import test from 'ava'
-import Utils, { flipCoin } from '../src/Utils'
+import { describe, it, expect } from 'ts-simple-test';
+import { flipCoin, getLevel } from '../src/Utils'
 
-
-export default (): void => {
-
-    test('Utils::flipCoin() will return true || false', t => {
-        const toss = Utils.flipCoin()
-        t.true(typeof toss === 'boolean')
+describe('Unit tests', () => {
+    it('Utils::flipCoin() toss will return true|false', () => {
+        const toss = flipCoin();
         if (toss) {
-            t.truthy(toss)
+            expect(toss).toBe(true);
+            expect(toss).toBeTruthy();
         }
         else {
-            t.falsy(toss)
+            expect(toss).toBe(false);
+            expect(toss).toBeFalsy();
         }
-    })
-
-    test('Utils::getLevel() will return a value >= 1 and <= max_value', t => {
-        const max = 10
-        const level = Utils.getLevel(max)
-        t.truthy(level)
-        t.true(level >= 1)
-        t.true(level <= max)
-    })
-
-}
+    });
+  
+    it('Utils::getLevel() will return a value >= 1 and <= max_value', () => {
+        const max = 10;
+        const level = getLevel(max);
+        expect(level).toBeTruthy();
+        expect(level).toBeGreaterThanOrEqualTo(1);
+        expect(level).toBeLessThanOrEqualTo(max);
+    });
+});

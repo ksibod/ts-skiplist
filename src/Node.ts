@@ -1,24 +1,20 @@
-import { NIL } from './Constants'
-import { getLevel } from './Utils'
-
-
 class Node<T> {
 
-    value: T
-    counter: number
-    pointers: Node<T>[]
+    public value: T;
+    public counter: number;
+    public pointers: Node<T>[];
 
     constructor(level: number, val?: T) {
-        this.value = val || null
-        this.counter = val ? 1 : 0
-        this.pointers = Array<Node<T>>(level + 1)
+        this.value = val || null;
+        this.counter = val ? 1 : 0;
+        this.pointers = Array<Node<T>>(level + 1);
     }
 
     increment(): void {
-        this.counter++
+        this.counter++;
     }
 
 }
 
 
-export default Node
+export default Node;

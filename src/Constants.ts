@@ -1,2 +1,2 @@
 
-export const NIL: null = null
+export const NIL: null = null;
