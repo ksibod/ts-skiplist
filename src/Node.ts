@@ -1,4 +1,4 @@
-class Node<T> {
+export class Node<T> {
 
     public value: T;
     public counter: number;
@@ -10,11 +10,8 @@ class Node<T> {
         this.pointers = Array<Node<T>>(level + 1);
     }
 
-    increment(): void {
+    public increment(): void {
         this.counter++;
     }
 
 }
-
-
-export default Node;

@@ -1,9 +1,9 @@
-import Node from './Node';
+import { Node } from './Node';
 import { NIL } from './Constants';
 import { getLevel } from './Utils';
 
 
-class SkipList<T> {
+export class SkipList<T> {
 
     private head: Node<T>;
     private updateNodes: Node<T>[];
@@ -17,7 +17,7 @@ class SkipList<T> {
         this.size = 0;
     }
 
-    insert(val: T): void {
+    public insert(val: T): void {
         // Start at the head node
         let tempNode = this.head;
 
@@ -49,7 +49,7 @@ class SkipList<T> {
         }
     }
 
-    remove(val: T): void {
+    public remove(val: T): void {
         // Start at the head node
         let tempNode = this.head;
 
@@ -77,7 +77,7 @@ class SkipList<T> {
         }
     }
 
-    find(val: T): Node<T> | undefined {
+    public find(val: T): Node<T> | undefined {
         // Start at the head node
         let tempNode = this.head;
 
@@ -99,6 +99,3 @@ class SkipList<T> {
     }
 
 }
-
-
-export default SkipList;
